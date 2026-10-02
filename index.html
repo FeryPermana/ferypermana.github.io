@@ -3,16 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ferry Permana | Software Engineer & Strategic Value Investor</title>
-    <meta name="description" content="Building software, documenting the journey, and growing wealth through disciplined investing.">
-    
+
+    <title>Ferry Permana | Software Engineer • Investor • Builder</title>
+
+    <meta
+        name="description"
+        content="Personal space of Ferry Permana — Software Engineer, Investor, and Builder. Building software, growing wealth, and documenting the journey."
+    >
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- AOS Animation CSS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <!-- Tailwind Config -->
+    <!-- AOS -->
+    <link
+        href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+        rel="stylesheet"
+    >
+
     <script>
         tailwind.config = {
             theme: {
@@ -29,10 +36,18 @@
                     },
                     keyframes: {
                         blob: {
-                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
-                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
-                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
-                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '0%': {
+                                transform: 'translate(0px, 0px) scale(1)'
+                            },
+                            '33%': {
+                                transform: 'translate(30px, -50px) scale(1.1)'
+                            },
+                            '66%': {
+                                transform: 'translate(-20px, 20px) scale(0.9)'
+                            },
+                            '100%': {
+                                transform: 'translate(0px, 0px) scale(1)'
+                            },
                         }
                     }
                 }
@@ -41,7 +56,7 @@
     </script>
 
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
         body {
             background-color: #020617;
@@ -50,43 +65,63 @@
             overflow-x: hidden;
         }
 
-        /* Glassmorphism utilities */
         .glass {
-            background: rgba(255, 255, 255, 0.03);
+            background: rgba(255,255,255,0.03);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            transition: all 0.3s ease;
+            border: 1px solid rgba(255,255,255,0.06);
+            transition: all .3s ease;
         }
 
         .glass:hover {
-            background: rgba(255, 255, 255, 0.06);
-            border-color: rgba(250, 204, 21, 0.3);
-            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+            background: rgba(255,255,255,0.055);
+            border-color: rgba(250,204,21,.25);
+            box-shadow: 0 20px 50px -25px rgba(0,0,0,.8);
         }
 
         .glass-card {
-            background: linear-gradient(145deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.01) 100%);
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(255,255,255,.05),
+                    rgba(255,255,255,.015)
+                );
+
             backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            -webkit-backdrop-filter: blur(20px);
+
+            border: 1px solid rgba(255,255,255,.08);
         }
 
-        /* Glowing buttons */
-        .btn-glow:hover {
-            box-shadow: 0 0 20px rgba(250, 204, 21, 0.4);
-        }
-
-        .animation-delay-2000 { animation-delay: 2s; }
-        .animation-delay-4000 { animation-delay: 4s; }
-
-        /* Typography polish */
         .text-gradient {
-            background: linear-gradient(to right, #FACC15, #fef08a);
+            background:
+                linear-gradient(
+                    to right,
+                    #FACC15,
+                    #FEF08A
+                );
+
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
-        /* 3D Coin Flip / Rotation Styles */
+        .btn-glow:hover {
+            box-shadow:
+                0 0 30px rgba(250,204,21,.25);
+        }
+
+        .animation-delay-2000 {
+            animation-delay: 2s;
+        }
+
+        .animation-delay-4000 {
+            animation-delay: 4s;
+        }
+
+        /* ==================================================
+           PROFILE COIN
+        ================================================== */
+
         .coin-viewport {
             perspective: 1000px;
         }
@@ -95,9 +130,14 @@
             position: relative;
             width: 100%;
             height: 100%;
+
             border-radius: 9999px;
+
             transform-style: preserve-3d;
-            transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+
+            transition:
+                transform .8s
+                cubic-bezier(.4,0,.2,1);
         }
 
         .coin-card.rotate-0 {
@@ -111,8 +151,10 @@
         .coin-face {
             position: absolute;
             inset: 0;
+
             border-radius: 9999px;
             overflow: hidden;
+
             backface-visibility: hidden;
             -webkit-backface-visibility: hidden;
         }
@@ -121,7 +163,10 @@
             transform: rotateY(180deg);
         }
 
-        /* Language Toggle */
+        /* ==================================================
+           LANGUAGE
+        ================================================== */
+
         .language-toggle {
             position: fixed;
             top: 24px;
@@ -131,32 +176,48 @@
 
         .language-switch {
             position: relative;
+
             display: inline-flex;
             align-items: center;
+
             gap: 4px;
             padding: 4px;
-            border: 1px solid rgba(255,255,255,0.10);
+
+            border: 1px solid rgba(255,255,255,.1);
             border-radius: 9999px;
-            background: rgba(2,6,23,0.75);
+
+            background: rgba(2,6,23,.78);
+
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
-            box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+
+            box-shadow:
+                0 8px 30px rgba(0,0,0,.25);
         }
 
         .language-switch button {
             position: relative;
             z-index: 2;
+
             min-width: 44px;
+
             padding: 7px 10px;
+
             border: 0;
             border-radius: 9999px;
+
             background: transparent;
+
             color: #9ca3af;
+
             font-size: 11px;
             font-weight: 700;
-            letter-spacing: 0.04em;
+
+            letter-spacing: .04em;
+
             cursor: pointer;
-            transition: color 0.25s ease;
+
+            transition: color .25s ease;
         }
 
         .language-switch button.active {
@@ -165,637 +226,2796 @@
 
         .language-slider {
             position: absolute;
+
             top: 4px;
             left: 4px;
+
             width: 44px;
             height: calc(100% - 8px);
+
             border-radius: 9999px;
+
             background: #FACC15;
-            transition: transform 0.25s ease;
+
+            transition: transform .25s ease;
         }
 
         .language-switch.en .language-slider {
             transform: translateX(48px);
         }
 
+        /* ==================================================
+           PROJECT
+        ================================================== */
+
+        .project-card {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-card::before {
+            content: "";
+
+            position: absolute;
+
+            width: 180px;
+            height: 180px;
+
+            top: -90px;
+            right: -90px;
+
+            border-radius: 9999px;
+
+            background:
+                rgba(250,204,21,.06);
+
+            filter: blur(20px);
+
+            pointer-events: none;
+        }
+
+        .tech-badge {
+            display: inline-flex;
+
+            padding: 6px 10px;
+
+            border-radius: 9999px;
+
+            background: rgba(255,255,255,.04);
+
+            border:
+                1px solid rgba(255,255,255,.08);
+
+            color: #cbd5e1;
+
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .status-dot {
+            width: 7px;
+            height: 7px;
+
+            border-radius: 9999px;
+        }
+
         @media (max-width: 640px) {
+
             .language-toggle {
                 top: 14px;
                 right: 14px;
             }
-        }
 
+        }
     </style>
 </head>
-<body class="antialiased selection:bg-gold selection:text-black">
+
+<body
+    class="
+        antialiased
+        selection:bg-gold
+        selection:text-black
+    "
+>
 
 
-    <!-- ================= LANGUAGE TOGGLE ================= -->
-    <div class="language-toggle" aria-label="Language selector">
-        <div id="language-switch" class="language-switch">
-            <div class="language-slider"></div>
-            <button id="lang-id" type="button" class="active" aria-label="Bahasa Indonesia">ID</button>
-            <button id="lang-en" type="button" aria-label="English">EN</button>
+<!-- ======================================================
+     LANGUAGE
+====================================================== -->
+
+<div
+    class="language-toggle"
+    aria-label="Language selector"
+>
+    <div
+        id="language-switch"
+        class="language-switch"
+    >
+        <div class="language-slider"></div>
+
+        <button
+            id="lang-id"
+            type="button"
+            class="active"
+        >
+            ID
+        </button>
+
+        <button
+            id="lang-en"
+            type="button"
+        >
+            EN
+        </button>
+    </div>
+</div>
+
+
+<!-- ======================================================
+     AURORA
+====================================================== -->
+
+<div
+    class="
+        fixed inset-0
+        z-0
+        overflow-hidden
+        pointer-events-none
+    "
+>
+
+    <div
+        class="
+            absolute
+            top-0 left-1/4
+            w-96 h-96
+            bg-purple-600/20
+            rounded-full
+            mix-blend-screen
+            blur-[100px]
+            opacity-50
+            animate-blob
+        "
+    ></div>
+
+    <div
+        class="
+            absolute
+            top-1/4 right-1/4
+            w-96 h-96
+            bg-blue-600/20
+            rounded-full
+            mix-blend-screen
+            blur-[100px]
+            opacity-50
+            animate-blob
+            animation-delay-2000
+        "
+    ></div>
+
+    <div
+        class="
+            absolute
+            -bottom-32 left-1/3
+            w-96 h-96
+            bg-yellow-500/10
+            rounded-full
+            mix-blend-screen
+            blur-[100px]
+            opacity-50
+            animate-blob
+            animation-delay-4000
+        "
+    ></div>
+
+</div>
+
+
+<!-- ======================================================
+     MAIN
+====================================================== -->
+
+<main
+    class="
+        relative z-10
+        max-w-screen-xl
+        mx-auto
+        px-6
+        py-24 md:py-32
+        flex flex-col
+        gap-32
+    "
+>
+
+
+<!-- ======================================================
+     HERO
+====================================================== -->
+
+<section
+    id="home"
+    class="
+        flex flex-col
+        items-center
+        text-center
+        max-w-4xl
+        mx-auto
+    "
+    data-aos="fade-up"
+    data-aos-duration="1000"
+>
+
+
+    <!-- COIN -->
+
+    <div
+        id="profile-coin-container"
+        class="
+            relative
+            group
+            cursor-pointer
+            mb-8
+            flex flex-col
+            items-center
+        "
+    >
+
+        <div
+            class="
+                absolute -inset-1
+                bg-gradient-to-r
+                from-gold
+                to-yellow-600
+                rounded-full
+                blur
+                opacity-40
+                group-hover:opacity-75
+                transition
+                duration-500
+            "
+        ></div>
+
+
+        <div
+            class="
+                coin-viewport
+                relative
+                w-[130px] h-[130px]
+                sm:w-[160px] sm:h-[160px]
+                md:w-[180px] md:h-[180px]
+                z-10
+            "
+        >
+
+            <div
+                id="coin-element"
+                class="
+                    coin-card
+                    rotate-0
+                    border-2
+                    border-gold/50
+                    shadow-2xl
+                    bg-[#020617]
+                "
+            >
+
+                <!-- FERRY -->
+
+                <div
+                    class="
+                        coin-face
+                        coin-face-front
+                    "
+                >
+
+                    <img
+                        src="https://avatars.githubusercontent.com/u/48470122?v=4"
+                        alt="Ferry Permana"
+                        class="
+                            w-full
+                            h-full
+                            object-cover
+                        "
+                    >
+
+                </div>
+
+
+                <!-- WOLF -->
+
+                <div
+                    class="
+                        coin-face
+                        coin-face-back
+                    "
+                >
+
+                    <img
+                        src="https://ferypermana.github.io/file_00000000298072079d26622579180f06.png"
+                        alt="Wolf of Nothing"
+                        class="
+                            w-full
+                            h-full
+                            object-cover
+                        "
+                    >
+
+                </div>
+
+            </div>
+
         </div>
-    </div>
 
-    <!-- Aurora Background -->
-    <div class="fixed inset-0 z-0 overflow-hidden pointer-events-none">
-        <div class="absolute top-0 left-1/4 w-96 h-96 bg-purple-600/20 rounded-full mix-blend-screen filter blur-[100px] opacity-50 animate-blob"></div>
-        <div class="absolute top-1/4 right-1/4 w-96 h-96 bg-blue-600/20 rounded-full mix-blend-screen filter blur-[100px] opacity-50 animate-blob animation-delay-2000"></div>
-        <div class="absolute -bottom-32 left-1/3 w-96 h-96 bg-yellow-500/10 rounded-full mix-blend-screen filter blur-[100px] opacity-50 animate-blob animation-delay-4000"></div>
-    </div>
 
-    <!-- Main Content Container -->
-    <main class="relative z-10 max-w-screen-xl mx-auto px-6 py-24 md:py-32 flex flex-col gap-32">
+        <div
+            class="
+                flex flex-col
+                items-center
+                mt-3
+                z-10
+                gap-1.5
+            "
+        >
 
-        <!-- ================= HERO SECTION ================= -->
-        <section id="home" class="flex flex-col items-center text-center max-w-3xl mx-auto" data-aos="fade-up" data-aos-duration="1000">
-            
-            <!-- Rotating Coin Profile Showcase (Gabungan Karakter Putih & Serigala) -->
-            <div id="profile-coin-container" class="relative group cursor-pointer mb-8 flex flex-col items-center">
-                <!-- Glowing Background Ring Effect -->
-                <div class="absolute -inset-1 bg-gradient-to-r from-gold to-yellow-600 rounded-full blur opacity-40 group-hover:opacity-75 transition duration-500"></div>
-                
-                <!-- Coin Viewport -->
-                <div class="coin-viewport relative w-[130px] h-[130px] sm:w-[160px] sm:h-[160px] md:w-[180px] md:h-[180px] z-10">
-                    <div id="coin-element" class="coin-card rotate-0 border-2 border-gold/50 shadow-2xl bg-[#020617]">
-                        
-                        <!-- Front Face: Karakter Putih (GitHub Avatar) -->
-                        <div class="coin-face coin-face-front">
-                            <img src="https://avatars.githubusercontent.com/u/48470122?v=4" alt="Ferry Permana Avatar" class="w-full h-full object-cover" onerror="this.src='https://ui-avatars.com/api/?name=Ferry+Permana&background=020617&color=FACC15&size=200'">
-                        </div>
+            <span
+                id="coin-title"
+                class="
+                    text-xs
+                    sm:text-sm
+                    font-medium
+                    text-gray-300
+                    tracking-wide
+                    transition-opacity
+                "
+            >
+                ⚡ Ferry Permana
+            </span>
 
-                        <!-- Back Face: Karakter Serigala (Wolf of Nothing) -->
-                        <div class="coin-face coin-face-back">
-                            <img src="https://ferypermana.github.io/file_00000000298072079d26622579180f06.png" alt="Wolf of Nothing" class="w-full h-full object-cover" onerror="this.src='https://ui-avatars.com/api/?name=Wolf+Of+Nothing&background=020617&color=FACC15&size=200'">
-                        </div>
 
-                    </div>
-                </div>
+            <div
+                class="
+                    flex
+                    items-center
+                    gap-2
+                    pt-1
+                "
+            >
 
-                <!-- Indicators & Dynamic Title Section -->
-                <div class="flex flex-col items-center mt-3 z-10 gap-1.5">
-                    <span id="coin-title" class="text-xs sm:text-sm font-medium text-gray-300 tracking-wide transition-opacity duration-300">
-                        ⚡ Ferry Permana
-                    </span>
-                    
-                    <div class="flex items-center gap-2 pt-1">
-                        <button type="button" class="coin-dot w-2 h-2 rounded-full bg-gold transition-all duration-300" data-index="0" aria-label="Avatar"></button>
-                        <button type="button" class="coin-dot w-2 h-2 rounded-full bg-gray-600 transition-all duration-300" data-index="1" aria-label="Wolf of Nothing"></button>
-                    </div>
-                </div>
-            </div>
-            
-            <h1 class="text-4xl md:text-6xl font-bold tracking-tight mb-4">
-                Ferry Permana
-            </h1>
-            
-            <h2 class="text-xl md:text-2xl text-gray-400 font-medium mb-6">
-                Software Engineer <span class="text-gray-600 mx-2">&bull;</span> Strategic Value Investor
-            </h2>
+                <button
+                    class="
+                        coin-dot
+                        w-2 h-2
+                        rounded-full
+                        bg-gold
+                    "
+                    data-index="0"
+                ></button>
 
-            <div class="h-8 mb-6">
-                <span id="typed" class="text-xl md:text-2xl font-semibold text-gradient"></span>
+                <button
+                    class="
+                        coin-dot
+                        w-2 h-2
+                        rounded-full
+                        bg-gray-600
+                    "
+                    data-index="1"
+                ></button>
+
             </div>
 
-            <p class="text-lg text-gray-400 leading-relaxed mb-10 max-w-2xl">
-                Building software, documenting the journey, and growing wealth through disciplined investing.
+        </div>
+
+    </div>
+
+
+    <!-- NAME -->
+
+    <h1
+        class="
+            text-4xl
+            md:text-6xl
+            font-bold
+            tracking-tight
+            mb-4
+        "
+    >
+        Ferry Permana
+    </h1>
+
+
+    <!-- IDENTITY -->
+
+    <h2
+        class="
+            text-lg
+            md:text-2xl
+            text-gray-400
+            font-medium
+            mb-6
+        "
+    >
+        Software Engineer
+
+        <span class="text-gray-600 mx-2">
+            •
+        </span>
+
+        Investor
+
+        <span class="text-gray-600 mx-2">
+            •
+        </span>
+
+        Builder
+    </h2>
+
+
+    <!-- TYPED -->
+
+    <div
+        class="
+            h-8
+            mb-7
+        "
+    >
+
+        <span
+            id="typed"
+            class="
+                text-xl
+                md:text-2xl
+                font-semibold
+                text-gradient
+            "
+        ></span>
+
+    </div>
+
+
+    <!-- TAGLINE -->
+
+    <p
+        class="
+            text-lg
+            text-gray-400
+            leading-relaxed
+            max-w-2xl
+            mb-3
+        "
+        data-i18n="hero.description"
+    >
+        Membangun software, menumbuhkan aset,
+        dan mendokumentasikan perjalanan.
+    </p>
+
+
+    <p
+        class="
+            text-sm
+            text-gray-600
+            mb-10
+        "
+        data-i18n="hero.sub"
+    >
+        Tidak menjual mimpi. Hanya membangun,
+        belajar, mencoba, dan mencatat prosesnya.
+    </p>
+
+
+    <!-- CTA -->
+
+    <div
+        class="
+            flex
+            flex-col
+            sm:flex-row
+            gap-4
+            w-full
+            sm:w-auto
+        "
+    >
+
+        <a
+            href="#build"
+            class="
+                px-8 py-4
+                bg-gold
+                text-black
+                font-semibold
+                rounded-xl
+                btn-glow
+                hover:scale-105
+                transition-all
+                flex
+                items-center
+                justify-center
+                gap-2
+            "
+        >
+
+            <i
+                data-lucide="layers-3"
+                class="w-5 h-5"
+            ></i>
+
+            <span data-i18n="hero.explore">
+                Apa yang Saya Bangun
+            </span>
+
+        </a>
+
+
+        <a
+            href="https://github.com/FeryPermana"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="
+                px-8 py-4
+                glass
+                text-white
+                font-semibold
+                rounded-xl
+                hover:text-gold
+                transition-all
+                flex
+                items-center
+                justify-center
+                gap-2
+            "
+        >
+
+            <i
+                data-lucide="github"
+                class="w-5 h-5"
+            ></i>
+
+            GitHub
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     MY WORLD
+====================================================== -->
+
+<section
+    id="about"
+    class="
+        max-w-5xl
+        mx-auto
+        w-full
+    "
+    data-aos="fade-up"
+>
+
+    <h3
+        class="
+            text-sm
+            font-bold
+            tracking-widest
+            text-gold
+            uppercase
+            mb-8
+            flex
+            items-center
+            gap-4
+        "
+    >
+
+        <span
+            class="
+                w-8
+                h-[1px]
+                bg-gold
+            "
+        ></span>
+
+        <span data-i18n="section.world">
+            Dunia Saya
+        </span>
+
+    </h3>
+
+
+    <div
+        class="
+            glass-card
+            rounded-3xl
+            p-8
+            md:p-12
+        "
+    >
+
+        <p
+            class="
+                text-xl
+                md:text-2xl
+                text-white
+                font-medium
+                leading-relaxed
+                mb-8
+            "
+            data-i18n="about.lead"
+        >
+            Software adalah apa yang saya bangun.
+            Investing adalah bagaimana saya belajar
+            tentang nilai, risiko, dan waktu.
+        </p>
+
+
+        <div
+            class="
+                grid
+                grid-cols-1
+                md:grid-cols-2
+                gap-8
+                text-gray-400
+                leading-relaxed
+            "
+        >
+
+            <p data-i18n="about.software">
+                Saya menikmati proses mengubah sebuah ide
+                menjadi sistem yang benar-benar berjalan —
+                dari backend, REST API, database, sampai
+                frontend yang bisa digunakan.
             </p>
 
-            <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-                <a href="https://gettradeledger.com" target="_blank" class="px-8 py-4 bg-gold text-black font-semibold rounded-xl transition-all duration-300 btn-glow hover:scale-105 flex items-center justify-center gap-2">
-                    <i data-lucide="layout-dashboard" class="w-5 h-5"></i>
-                    <span data-i18n="hero.explore">Jelajahi TradeLedger</span>
-                </a>
-                <a href="https://github.com/FeryPermana/gettradeledger.com" target="_blank" class="px-8 py-4 glass text-white font-semibold rounded-xl hover:text-gold transition-all duration-300 flex items-center justify-center gap-2 group">
-                    <i data-lucide="github" class="w-5 h-5 group-hover:text-gold transition-colors"></i>
-                    <span data-i18n="common.sourceCode">Kode Sumber</span>
-                </a>
-            </div>
-        </section>
 
-        <!-- ================= ABOUT SECTION ================= -->
-        <section id="about" data-aos="fade-up" class="max-w-4xl mx-auto w-full">
-            <h3 class="text-sm font-bold tracking-widest text-gold uppercase mb-8 flex items-center gap-4">
-                <span class="w-8 h-[1px] bg-gold"></span>
-                <span data-i18n="section.about">Tentang Saya</span>
-            </h3>
-            <div class="glass-card rounded-3xl p-8 md:p-12 text-gray-300 text-lg leading-relaxed space-y-6">
-                <p>
-                    <span data-i18n="about.p1">Saya adalah Software Engineer yang berfokus membangun aplikasi web yang scalable menggunakan Laravel, Vue.js, REST API, Docker, dan teknologi web modern.</span>
-                </p>
-                <p>
-                    <span data-i18n="about.p2">Di luar software engineering, saya mendokumentasikan perjalanan investasi saya. Alih-alih mengikuti satu gaya investasi, saya beradaptasi dengan siklus pasar dengan menggabungkan value investing, growth investing, dan swing trading dengan manajemen risiko yang disiplin.</span>
-                </p>
-                <p class="text-white font-medium italic border-l-2 border-gold pl-4 py-1">
-                    <span data-i18n="about.quote">Saya tidak menjual kursus. Saya menikmati proses membangun produk, berbagi ide, dan terus belajar.</span>
-                </p>
-            </div>
-        </section>
-
-        <!-- ================= WHAT I DO ================= -->
-        <section id="what-i-do" class="w-full">
-            <h3 class="text-sm font-bold tracking-widest text-gold uppercase mb-8 flex items-center gap-4" data-aos="fade-right">
-                <span class="w-8 h-[1px] bg-gold"></span>
-                <span data-i18n="section.what">Yang Saya Kerjakan</span>
-            </h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="glass rounded-3xl p-8 hover:-translate-y-2 transition-transform duration-300 group" data-aos="fade-up" data-aos-delay="100">
-                    <div class="w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center mb-6 group-hover:bg-gold/10 transition-colors">
-                        <i data-lucide="code-2" class="w-7 h-7 text-gray-400 group-hover:text-gold"></i>
-                    </div>
-                    <h4 class="text-2xl font-bold text-white mb-4"><span data-i18n="what.software">Software Engineering</span></h4>
-                    <ul class="space-y-3 text-gray-400">
-                        <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-gold/70"></i> Laravel</li>
-                        <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-gold/70"></i> PHP</li>
-                        <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-gold/70"></i> Vue.js</li>
-                        <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-gold/70"></i> REST API</li>
-                        <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-gold/70"></i> Docker</li>
-                        <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-gold/70"></i> MySQL</li>
-                    </ul>
-                </div>
-                
-                <div class="glass rounded-3xl p-8 hover:-translate-y-2 transition-transform duration-300 group" data-aos="fade-up" data-aos-delay="200">
-                    <div class="w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center mb-6 group-hover:bg-gold/10 transition-colors">
-                        <i data-lucide="line-chart" class="w-7 h-7 text-gray-400 group-hover:text-gold"></i>
-                    </div>
-                    <h4 class="text-2xl font-bold text-white mb-4"><span data-i18n="what.investing">Investasi Strategis</span></h4>
-                    <ul class="space-y-3 text-gray-400">
-                        <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-gold/70"></i> <span data-i18n="investing.value">Value Investing</span></li>
-                        <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-gold/70"></i> <span data-i18n="investing.growth">Growth Investing</span></li>
-                        <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-gold/70"></i> <span data-i18n="investing.swing">Swing Trading</span></li>
-                        <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-gold/70"></i> <span data-i18n="investing.portfolio">Manajemen Portofolio</span></li>
-                        <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-gold/70"></i> <span data-i18n="investing.risk">Manajemen Risiko</span></li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- ================= FEATURED PROJECT ================= -->
-        <section id="project" class="w-full">
-            <h3 class="text-sm font-bold tracking-widest text-gold uppercase mb-8 flex items-center gap-4" data-aos="fade-right">
-                <span class="w-8 h-[1px] bg-gold"></span>
-                <span data-i18n="section.featured">Proyek Unggulan</span>
-            </h3>
-            
-            <div class="glass-card rounded-[2rem] p-6 md:p-12 overflow-hidden relative" data-aos="fade-up">
-                
-                <div class="flex flex-col lg:flex-row gap-12 items-center">
-                    
-                    <div class="w-full lg:w-1/2 flex flex-col items-start z-10">
-                        <div class="flex items-center gap-4 mb-6">
-                            <img src="assets/images/logo.png" alt="TradeLedger Logo" class="w-12 h-12 rounded-xl object-contain bg-white/5 p-2" onerror="this.src='https://ui-avatars.com/api/?name=TL&background=FACC15&color=020617&rounded=true'">
-                            <div>
-                                <h4 class="text-3xl font-bold text-white">TradeLedger</h4>
-                                <p class="text-gold text-sm font-medium mt-1">Modern Investment & Trading <span data-i18n="investing.portfolio">Manajemen Portofolio</span> Platform</p>
-                            </div>
-                        </div>
-                        
-                        <p class="text-gray-400 text-lg leading-relaxed mb-8">
-                            <span data-i18n="project.description">TradeLedger membantu investor mengelola portofolio, mencatat transaksi, menganalisis investasi, memantau performa, dan membangun kekayaan jangka panjang melalui platform yang modern dan intuitif.</span>
-                        </p>
-                        
-                        <div class="flex flex-wrap gap-2 mb-10">
-                            <span class="bg-gold/10 border border-gold/20 text-gold px-3 py-1.5 rounded-full text-xs font-semibold tracking-wide">Laravel 12</span>
-                            <span class="bg-gold/10 border border-gold/20 text-gold px-3 py-1.5 rounded-full text-xs font-semibold tracking-wide">Vue.js 3</span>
-                            <span class="bg-gold/10 border border-gold/20 text-gold px-3 py-1.5 rounded-full text-xs font-semibold tracking-wide">PHP 8.2</span>
-                            <span class="bg-gold/10 border border-gold/20 text-gold px-3 py-1.5 rounded-full text-xs font-semibold tracking-wide">Docker</span>
-                            <span class="bg-gold/10 border border-gold/20 text-gold px-3 py-1.5 rounded-full text-xs font-semibold tracking-wide">MySQL</span>
-                            <span class="bg-gold/10 border border-gold/20 text-gold px-3 py-1.5 rounded-full text-xs font-semibold tracking-wide">REST API</span>
-                            <span class="bg-gold/10 border border-gold/20 text-gold px-3 py-1.5 rounded-full text-xs font-semibold tracking-wide">Tailwind CSS</span>
-                        </div>
-                        
-                        <div class="flex flex-wrap gap-4">
-                            <a href="https://gettradeledger.com" target="_blank" class="px-6 py-3 bg-white text-black font-semibold rounded-xl hover:bg-gold transition-colors duration-300 flex items-center gap-2 text-sm">
-                                <i data-lucide="external-link" class="w-4 h-4"></i> <span data-i18n="common.live">Website Live</span>
-                            </a>
-                            <a href="https://github.com/FeryPermana/gettradeledger.com" target="_blank" class="px-6 py-3 glass text-white font-semibold rounded-xl hover:text-gold transition-colors duration-300 flex items-center gap-2 text-sm">
-                                <i data-lucide="github" class="w-4 h-4"></i> <span data-i18n="common.sourceCode">Kode Sumber</span>
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <div class="w-full lg:w-1/2 flex flex-col gap-6 relative z-10">
-                        <div class="rounded-2xl overflow-hidden border border-white/10 shadow-2xl group">
-                            <img src="https://raw.githubusercontent.com/FeryPermana/gettradeledger.com/main/docs/images/dashboard-desktop-1.png" alt="TradeLedger Dashboard" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700 ease-out" onerror="this.src='https://placehold.co/800x450/1e293b/cbd5e1?text=TradeLedger+Dashboard'">
-                        </div>
-                        <div class="rounded-2xl overflow-hidden border border-white/10 shadow-2xl group lg:ml-12">
-                            <img src="https://raw.githubusercontent.com/FeryPermana/gettradeledger.com/main/docs/images/portfolio-desktop-2.png" alt="TradeLedger Portfolio" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700 ease-out" onerror="this.src='https://placehold.co/800x450/1e293b/cbd5e1?text=TradeLedger+Portfolio'">
-                        </div>
-                        <div class="rounded-2xl overflow-hidden border border-white/10 shadow-2xl group lg:-ml-6">
-                            <img src="https://raw.githubusercontent.com/FeryPermana/gettradeledger.com/main/docs/images/trades-desktop-1.png" alt="TradeLedger Trades" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700 ease-out" onerror="this.src='https://placehold.co/800x450/1e293b/cbd5e1?text=TradeLedger+Trades'">
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
-        </section>
-
-        <!-- ================= TECH STACK ================= -->
-        <section id="tech-stack" class="w-full">
-            <h3 class="text-sm font-bold tracking-widest text-gold uppercase mb-8 flex items-center gap-4 text-center justify-center md:justify-start" data-aos="fade-right">
-                <span class="w-8 h-[1px] bg-gold hidden md:block"></span>
-                <span data-i18n="section.tech">Tech Stack</span>
-            </h3>
-            
-            <div class="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6">
-                <!-- Stack Items -->
-                <div class="glass p-6 rounded-2xl flex flex-col items-center justify-center gap-3 hover:-translate-y-2 transition-transform duration-300 group" data-aos="zoom-in" data-aos-delay="50">
-                    <i data-lucide="triangle" class="w-8 h-8 text-red-500 group-hover:scale-110 transition-transform"></i>
-                    <span class="text-sm font-medium text-gray-300">Laravel</span>
-                </div>
-                <div class="glass p-6 rounded-2xl flex flex-col items-center justify-center gap-3 hover:-translate-y-2 transition-transform duration-300 group" data-aos="zoom-in" data-aos-delay="100">
-                    <i data-lucide="file-code-2" class="w-8 h-8 text-indigo-400 group-hover:scale-110 transition-transform"></i>
-                    <span class="text-sm font-medium text-gray-300">PHP</span>
-                </div>
-                <div class="glass p-6 rounded-2xl flex flex-col items-center justify-center gap-3 hover:-translate-y-2 transition-transform duration-300 group" data-aos="zoom-in" data-aos-delay="150">
-                    <i data-lucide="layout-template" class="w-8 h-8 text-emerald-500 group-hover:scale-110 transition-transform"></i>
-                    <span class="text-sm font-medium text-gray-300">Vue.js</span>
-                </div>
-                <div class="glass p-6 rounded-2xl flex flex-col items-center justify-center gap-3 hover:-translate-y-2 transition-transform duration-300 group" data-aos="zoom-in" data-aos-delay="200">
-                    <i data-lucide="palette" class="w-8 h-8 text-cyan-400 group-hover:scale-110 transition-transform"></i>
-                    <span class="text-sm font-medium text-gray-300">Tailwind CSS</span>
-                </div>
-                <div class="glass p-6 rounded-2xl flex flex-col items-center justify-center gap-3 hover:-translate-y-2 transition-transform duration-300 group" data-aos="zoom-in" data-aos-delay="250">
-                    <i data-lucide="container" class="w-8 h-8 text-blue-500 group-hover:scale-110 transition-transform"></i>
-                    <span class="text-sm font-medium text-gray-300">Docker</span>
-                </div>
-                <div class="glass p-6 rounded-2xl flex flex-col items-center justify-center gap-3 hover:-translate-y-2 transition-transform duration-300 group" data-aos="zoom-in" data-aos-delay="300">
-                    <i data-lucide="database" class="w-8 h-8 text-orange-400 group-hover:scale-110 transition-transform"></i>
-                    <span class="text-sm font-medium text-gray-300">MySQL</span>
-                </div>
-                <div class="glass p-6 rounded-2xl flex flex-col items-center justify-center gap-3 hover:-translate-y-2 transition-transform duration-300 group" data-aos="zoom-in" data-aos-delay="350">
-                    <i data-lucide="server-cog" class="w-8 h-8 text-blue-400 group-hover:scale-110 transition-transform"></i>
-                    <span class="text-sm font-medium text-gray-300">PostgreSQL</span>
-                </div>
-                <div class="glass p-6 rounded-2xl flex flex-col items-center justify-center gap-3 hover:-translate-y-2 transition-transform duration-300 group" data-aos="zoom-in" data-aos-delay="400">
-                    <i data-lucide="git-branch" class="w-8 h-8 text-orange-500 group-hover:scale-110 transition-transform"></i>
-                    <span class="text-sm font-medium text-gray-300">Git</span>
-                </div>
-                <div class="glass p-6 rounded-2xl flex flex-col items-center justify-center gap-3 hover:-translate-y-2 transition-transform duration-300 group" data-aos="zoom-in" data-aos-delay="450">
-                    <i data-lucide="network" class="w-8 h-8 text-green-400 group-hover:scale-110 transition-transform"></i>
-                    <span class="text-sm font-medium text-gray-300">REST API</span>
-                </div>
-                <div class="glass p-6 rounded-2xl flex flex-col items-center justify-center gap-3 hover:-translate-y-2 transition-transform duration-300 group" data-aos="zoom-in" data-aos-delay="500">
-                    <i data-lucide="terminal" class="w-8 h-8 text-yellow-100 group-hover:scale-110 transition-transform"></i>
-                    <span class="text-sm font-medium text-gray-300">Linux</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- ================= PRINCIPLES & NOW ================= -->
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 w-full">
-            
-            <section id="principles" class="lg:col-span-2">
-                <h3 class="text-sm font-bold tracking-widest text-gold uppercase mb-8 flex items-center gap-4" data-aos="fade-right">
-                    <span class="w-8 h-[1px] bg-gold"></span>
-                    <span data-i18n="section.principles">Prinsip</span>
-                </h3>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div class="glass p-6 rounded-2xl text-center text-white/90 font-medium hover:border-gold/30 transition-colors" data-aos="zoom-in"><span data-i18n="principles.build">Bangun sebelum mengajar.</span></div>
-                    <div class="glass p-6 rounded-2xl text-center text-white/90 font-medium hover:border-gold/30 transition-colors" data-aos="zoom-in" data-aos-delay="100"><span data-i18n="principles.discipline">Tetap disiplin.</span></div>
-                    <div class="glass p-6 rounded-2xl text-center text-white/90 font-medium hover:border-gold/30 transition-colors" data-aos="zoom-in" data-aos-delay="200"><span data-i18n="principles.longterm">Berpikir jangka panjang.</span></div>
-                    <div class="glass p-6 rounded-2xl text-center text-white/90 font-medium hover:border-gold/30 transition-colors" data-aos="zoom-in" data-aos-delay="300"><span data-i18n="principles.learning">Jangan pernah berhenti belajar.</span></div>
-                </div>
-            </section>
-
-            <section id="now" class="lg:col-span-1">
-                <h3 class="text-sm font-bold tracking-widest text-gold uppercase mb-8 flex items-center gap-4" data-aos="fade-right">
-                    <span class="w-8 h-[1px] bg-gold"></span>
-                    Now
-                </h3>
-                <div class="glass-card p-8 rounded-3xl space-y-6" data-aos="fade-up">
-                    <div>
-                        <p class="text-xs text-gray-500 uppercase tracking-wider font-semibold mb-1"><span data-i18n="now.buildingLabel">Sedang Dibangun</span></p>
-                        <p class="text-white font-medium flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span> TradeLedger</p>
-                    </div>
-                    <div>
-                        <p class="text-xs text-gray-500 uppercase tracking-wider font-semibold mb-1"><span data-i18n="now.learningLabel">Sedang Dipelajari</span></p>
-                        <p class="text-white font-medium">System Design</p>
-                    </div>
-                    <div>
-                        <p class="text-xs text-gray-500 uppercase tracking-wider font-semibold mb-1"><span data-i18n="now.goalLabel">Tujuan Saat Ini</span></p>
-                        <p class="text-white font-medium"><span data-i18n="now.goal">Membangun Investment Operating System</span></p>
-                    </div>
-                </div>
-            </section>
+            <p data-i18n="about.investing">
+                Di sisi lain, saya mendokumentasikan
+                perjalanan investasi pribadi: mempelajari
+                bisnis, mengelola risiko, membangun
+                portofolio, dan sesekali melakukan
+                swing trading dengan sistem yang terukur.
+            </p>
 
         </div>
 
-        <!-- ================= CONNECT ================= -->
-        <section id="connect" class="w-full max-w-3xl mx-auto text-center" data-aos="fade-up">
-            <h3 class="text-sm font-bold tracking-widest text-gold uppercase mb-8 flex items-center justify-center gap-4">
-                <span class="w-8 h-[1px] bg-gold"></span>
-                <span data-i18n="section.connect">Terhubung</span>
-                <span class="w-8 h-[1px] bg-gold"></span>
-            </h3>
-            
-            <div class="flex flex-col gap-4">
-                <a href="https://gettradeledger.com" target="_blank" class="w-full p-5 glass rounded-2xl flex items-center justify-between group hover:-translate-y-1 transition-all">
-                    <div class="flex items-center gap-4">
-                        <div class="p-2 bg-white/5 rounded-lg group-hover:text-gold"><i data-lucide="globe"></i></div>
-                        <span class="font-semibold text-white">TradeLedger</span>
-                    </div>
-                    <i data-lucide="arrow-up-right" class="text-gray-500 group-hover:text-gold transition-colors"></i>
-                </a>
 
-                <a href="https://github.com/FeryPermana" target="_blank" class="w-full p-5 glass rounded-2xl flex items-center justify-between group hover:-translate-y-1 transition-all">
-                    <div class="flex items-center gap-4">
-                        <div class="p-2 bg-white/5 rounded-lg group-hover:text-gold"><i data-lucide="github"></i></div>
-                        <span class="font-semibold text-white">GitHub</span>
-                    </div>
-                    <i data-lucide="arrow-up-right" class="text-gray-500 group-hover:text-gold transition-colors"></i>
-                </a>
+        <div
+            class="
+                mt-10
+                pt-8
+                border-t
+                border-white/5
+                flex
+                items-start
+                gap-4
+            "
+        >
 
-                <a href="https://github.com/FeryPermana/gettradeledger.com" target="_blank" class="w-full p-5 glass rounded-2xl flex items-center justify-between group hover:-translate-y-1 transition-all">
-                    <div class="flex items-center gap-4">
-                        <div class="p-2 bg-white/5 rounded-lg group-hover:text-gold"><i data-lucide="folder-git-2"></i></div>
-                        <span class="font-semibold text-white"><span data-i18n="connect.repo">Repository TradeLedger</span></span>
-                    </div>
-                    <i data-lucide="arrow-up-right" class="text-gray-500 group-hover:text-gold transition-colors"></i>
-                </a>
+            <span
+                class="
+                    text-2xl
+                    shrink-0
+                "
+            >
+                🐺
+            </span>
 
-                <a href="https://www.linkedin.com/in/ferrypermana" target="_blank" class="w-full p-5 glass rounded-2xl flex items-center justify-between group hover:-translate-y-1 transition-all">
-                    <div class="flex items-center gap-4">
-                        <div class="p-2 bg-white/5 rounded-lg group-hover:text-gold"><i data-lucide="linkedin"></i></div>
-                        <span class="font-semibold text-white">LinkedIn</span>
-                    </div>
-                    <i data-lucide="arrow-up-right" class="text-gray-500 group-hover:text-gold transition-colors"></i>
-                </a>
+            <div>
 
-                <a href="mailto:ferrypermana.webdeveloper@gmail.com" class="w-full p-5 glass rounded-2xl flex items-center justify-between group hover:-translate-y-1 transition-all">
-                    <div class="flex items-center gap-4">
-                        <div class="p-2 bg-white/5 rounded-lg group-hover:text-gold"><i data-lucide="mail"></i></div>
-                        <span class="font-semibold text-white">Email</span>
-                    </div>
-                    <i data-lucide="arrow-up-right" class="text-gray-500 group-hover:text-gold transition-colors"></i>
-                </a>
-            </div>
-        </section>
-
-        <!-- ================= FOOTER ================= -->
-        <footer class="w-full text-center pt-16 border-t border-white/5" data-aos="fade-up">
-            <div class="mb-10 text-xl font-light tracking-wide text-gray-300">
-                <p><span data-i18n="footer.software">Membangun Software.</span></p>
-                <p><span data-i18n="footer.wealth">Menumbuhkan Kekayaan.</span></p>
-                <p><span data-i18n="footer.ideas">Berbagi Ide.</span></p>
-            </div>
-                <p class="text-gray-600 text-sm">
-                    &copy; 2026 Ferry Permana
+                <p
+                    class="
+                        text-white
+                        font-semibold
+                        mb-1
+                    "
+                >
+                    Wolf of Nothing
                 </p>
-        </footer>
 
-    </main>
+                <p
+                    class="
+                        text-gray-500
+                        text-sm
+                        leading-relaxed
+                    "
+                    data-i18n="about.wolf"
+                >
+                    Bukan expert. Bukan guru.
+                    Hanya identitas untuk perjalanan
+                    membangun, belajar, berinvestasi,
+                    gagal, memperbaiki, dan terus berjalan.
+                </p>
 
-    <!-- Scripts -->
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+            </div>
 
-    <script>
-        // Initialize Lucide Icons
-        lucide.createIcons();
+        </div>
 
-        // Initialize AOS
-        AOS.init({
-            once: true,
-            offset: 50,
-            duration: 800,
-            easing: 'ease-out-cubic',
-        });
+    </div>
+
+</section>
 
 
-        /* ================= 3D COIN FLIP ROTATION LOGIC (5 DETIK INTERVAL) ================= */
-        document.addEventListener('DOMContentLoaded', () => {
-            const coinContainer = document.getElementById('profile-coin-container');
-            const coinElement = document.getElementById('coin-element');
-            const dots = coinContainer.querySelectorAll('.coin-dot');
-            const titleElement = document.getElementById('coin-title');
+<!-- ======================================================
+     TWO WORLDS
+====================================================== -->
 
-            const slideData = [
-                { title: "⚡ Ferry Permana" },
-                { title: "🐺 Wolf of Nothing" }
-            ];
+<section id="worlds">
+
+    <h3
+        class="
+            text-sm
+            font-bold
+            tracking-widest
+            text-gold
+            uppercase
+            mb-8
+            flex
+            items-center
+            gap-4
+        "
+        data-aos="fade-right"
+    >
+
+        <span
+            class="
+                w-8
+                h-[1px]
+                bg-gold
+            "
+        ></span>
+
+        <span data-i18n="section.do">
+            Yang Saya Jalani
+        </span>
+
+    </h3>
+
+
+    <div
+        class="
+            grid
+            grid-cols-1
+            md:grid-cols-2
+            gap-6
+        "
+    >
+
+
+        <!-- SOFTWARE -->
+
+        <div
+            class="
+                glass
+                rounded-3xl
+                p-8
+                md:p-10
+                group
+            "
+            data-aos="fade-up"
+        >
+
+            <div
+                class="
+                    w-14 h-14
+                    rounded-2xl
+                    bg-white/5
+                    flex
+                    items-center
+                    justify-center
+                    mb-7
+                    group-hover:bg-gold/10
+                    transition
+                "
+            >
+
+                <i
+                    data-lucide="code-2"
+                    class="
+                        w-7 h-7
+                        text-gray-400
+                        group-hover:text-gold
+                    "
+                ></i>
+
+            </div>
+
+
+            <p
+                class="
+                    text-xs
+                    text-gray-500
+                    uppercase
+                    tracking-[.2em]
+                    font-bold
+                    mb-2
+                "
+            >
+                01
+            </p>
+
+
+            <h4
+                class="
+                    text-2xl
+                    font-bold
+                    mb-4
+                "
+            >
+                Software Engineering
+            </h4>
+
+
+            <p
+                class="
+                    text-gray-400
+                    leading-relaxed
+                    mb-7
+                "
+                data-i18n="world.software"
+            >
+                Membangun aplikasi dan API sambil
+                terus memperluas cara berpikir
+                sebagai software engineer.
+            </p>
+
+
+            <div
+                class="
+                    flex
+                    flex-wrap
+                    gap-2
+                "
+            >
+
+                <span class="tech-badge">Laravel</span>
+                <span class="tech-badge">Vue.js</span>
+                <span class="tech-badge">REST API</span>
+                <span class="tech-badge">Spring Boot</span>
+                <span class="tech-badge">Docker</span>
+                <span class="tech-badge">SQL</span>
+
+            </div>
+
+        </div>
+
+
+        <!-- INVESTING -->
+
+        <div
+            class="
+                glass
+                rounded-3xl
+                p-8
+                md:p-10
+                group
+            "
+            data-aos="fade-up"
+            data-aos-delay="100"
+        >
+
+            <div
+                class="
+                    w-14 h-14
+                    rounded-2xl
+                    bg-white/5
+                    flex
+                    items-center
+                    justify-center
+                    mb-7
+                    group-hover:bg-gold/10
+                    transition
+                "
+            >
+
+                <i
+                    data-lucide="chart-no-axes-combined"
+                    class="
+                        w-7 h-7
+                        text-gray-400
+                        group-hover:text-gold
+                    "
+                ></i>
+
+            </div>
+
+
+            <p
+                class="
+                    text-xs
+                    text-gray-500
+                    uppercase
+                    tracking-[.2em]
+                    font-bold
+                    mb-2
+                "
+            >
+                02
+            </p>
+
+
+            <h4
+                class="
+                    text-2xl
+                    font-bold
+                    mb-4
+                "
+                data-i18n="investing.title"
+            >
+                Investing Journey
+            </h4>
+
+
+            <p
+                class="
+                    text-gray-400
+                    leading-relaxed
+                    mb-7
+                "
+                data-i18n="world.investing"
+            >
+                Membangun aset secara bertahap,
+                mempelajari bisnis dan market,
+                serta mendokumentasikan prosesnya.
+            </p>
+
+
+            <div
+                class="
+                    flex
+                    flex-wrap
+                    gap-2
+                "
+            >
+
+                <span class="tech-badge">
+                    Value Investing
+                </span>
+
+                <span class="tech-badge">
+                    Growth Investing
+                </span>
+
+                <span class="tech-badge">
+                    Swing Trading
+                </span>
+
+                <span class="tech-badge">
+                    Portfolio
+                </span>
+
+                <span class="tech-badge">
+                    Risk Management
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     WHAT I'M BUILDING
+====================================================== -->
+
+<section id="build">
+
+    <div
+        class="
+            flex
+            flex-col
+            md:flex-row
+            md:items-end
+            md:justify-between
+            gap-4
+            mb-10
+        "
+        data-aos="fade-right"
+    >
+
+        <div>
+
+            <h3
+                class="
+                    text-sm
+                    font-bold
+                    tracking-widest
+                    text-gold
+                    uppercase
+                    mb-3
+                    flex
+                    items-center
+                    gap-4
+                "
+            >
+
+                <span
+                    class="
+                        w-8
+                        h-[1px]
+                        bg-gold
+                    "
+                ></span>
+
+                <span data-i18n="section.build">
+                    Yang Saya Bangun
+                </span>
+
+            </h3>
+
+
+            <p
+                class="
+                    text-gray-500
+                    max-w-xl
+                "
+                data-i18n="build.intro"
+            >
+                Project pribadi bukan sekadar untuk selesai.
+                Masing-masing menjadi tempat saya
+                belajar dan bereksperimen.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div
+        class="
+            grid
+            grid-cols-1
+            lg:grid-cols-3
+            gap-6
+        "
+    >
+
+
+        <!-- ==================================================
+             TRADELEDGER
+        ================================================== -->
+
+        <article
+            class="
+                project-card
+                glass-card
+                rounded-3xl
+                p-8
+                flex
+                flex-col
+            "
+            data-aos="fade-up"
+        >
+
+            <div
+                class="
+                    flex
+                    justify-between
+                    items-start
+                    gap-4
+                    mb-8
+                "
+            >
+
+                <div
+                    class="
+                        w-14 h-14
+                        rounded-2xl
+                        bg-gold/10
+                        border
+                        border-gold/20
+                        flex
+                        items-center
+                        justify-center
+                    "
+                >
+
+                    <i
+                        data-lucide="chart-candlestick"
+                        class="
+                            w-7 h-7
+                            text-gold
+                        "
+                    ></i>
+
+                </div>
+
+
+                <div
+                    class="
+                        flex
+                        items-center
+                        gap-2
+                        text-xs
+                        font-semibold
+                        text-green-400
+                    "
+                >
+
+                    <span
+                        class="
+                            status-dot
+                            bg-green-400
+                        "
+                    ></span>
+
+                    <span data-i18n="status.active">
+                        Active
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <p
+                class="
+                    text-xs
+                    text-gold
+                    font-bold
+                    uppercase
+                    tracking-[.18em]
+                    mb-2
+                "
+            >
+                Laravel × Vue.js
+            </p>
+
+
+            <h4
+                class="
+                    text-2xl
+                    font-bold
+                    mb-4
+                "
+            >
+                TradeLedger
+            </h4>
+
+
+            <p
+                class="
+                    text-gray-400
+                    leading-relaxed
+                    mb-7
+                "
+                data-i18n="trade.description"
+            >
+                Personal investment & trading journal
+                untuk mencatat keputusan, transaksi,
+                trade execution, portofolio, dan
+                perjalanan investasi saya sendiri.
+            </p>
+
+
+            <div
+                class="
+                    flex
+                    flex-wrap
+                    gap-2
+                    mb-8
+                "
+            >
+
+                <span class="tech-badge">Laravel</span>
+                <span class="tech-badge">Vue.js</span>
+                <span class="tech-badge">MySQL</span>
+                <span class="tech-badge">Redis</span>
+                <span class="tech-badge">Docker</span>
+
+            </div>
+
+
+            <a
+                href="https://github.com/FeryPermana/gettradeledger.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="
+                    mt-auto
+                    inline-flex
+                    items-center
+                    gap-2
+                    text-sm
+                    font-semibold
+                    text-white
+                    hover:text-gold
+                    transition
+                "
+            >
+
+                <i
+                    data-lucide="github"
+                    class="w-5 h-5"
+                ></i>
+
+                <span data-i18n="common.github">
+                    Lihat di GitHub
+                </span>
+
+                <i
+                    data-lucide="arrow-up-right"
+                    class="w-4 h-4"
+                ></i>
+
+            </a>
+
+        </article>
+
+
+        <!-- ==================================================
+             TASKLEDGER
+        ================================================== -->
+
+        <article
+            class="
+                project-card
+                glass-card
+                rounded-3xl
+                p-8
+                flex
+                flex-col
+            "
+            data-aos="fade-up"
+            data-aos-delay="100"
+        >
+
+            <div
+                class="
+                    flex
+                    justify-between
+                    items-start
+                    gap-4
+                    mb-8
+                "
+            >
+
+                <div
+                    class="
+                        w-14 h-14
+                        rounded-2xl
+                        bg-blue-500/10
+                        border
+                        border-blue-500/20
+                        flex
+                        items-center
+                        justify-center
+                    "
+                >
+
+                    <i
+                        data-lucide="list-checks"
+                        class="
+                            w-7 h-7
+                            text-blue-400
+                        "
+                    ></i>
+
+                </div>
+
+
+                <div
+                    class="
+                        flex
+                        items-center
+                        gap-2
+                        text-xs
+                        font-semibold
+                        text-blue-400
+                    "
+                >
+
+                    <span
+                        class="
+                            status-dot
+                            bg-blue-400
+                            animate-pulse
+                        "
+                    ></span>
+
+                    <span data-i18n="status.building">
+                        Building
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <p
+                class="
+                    text-xs
+                    text-blue-400
+                    font-bold
+                    uppercase
+                    tracking-[.18em]
+                    mb-2
+                "
+            >
+                Spring Boot × Vue.js
+            </p>
+
+
+            <h4
+                class="
+                    text-2xl
+                    font-bold
+                    mb-4
+                "
+            >
+                TaskLedger
+            </h4>
+
+
+            <p
+                class="
+                    text-gray-400
+                    leading-relaxed
+                    mb-7
+                "
+                data-i18n="task.description"
+            >
+                Project yang sedang saya bangun
+                untuk mengeksplorasi Java Spring Boot,
+                enterprise backend development,
+                REST API, dan arsitektur aplikasi
+                yang lebih terstruktur.
+            </p>
+
+
+            <div
+                class="
+                    flex
+                    flex-wrap
+                    gap-2
+                    mb-8
+                "
+            >
+
+                <span class="tech-badge">Java</span>
+                <span class="tech-badge">Spring Boot</span>
+                <span class="tech-badge">Vue.js</span>
+                <span class="tech-badge">JPA</span>
+                <span class="tech-badge">Flyway</span>
+
+            </div>
+
+
+            <a
+                href="https://github.com/FeryPermana/taskledger"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="
+                    mt-auto
+                    inline-flex
+                    items-center
+                    gap-2
+                    text-sm
+                    font-semibold
+                    text-white
+                    hover:text-gold
+                    transition
+                "
+            >
+
+                <i
+                    data-lucide="github"
+                    class="w-5 h-5"
+                ></i>
+
+                <span data-i18n="common.github">
+                    Lihat di GitHub
+                </span>
+
+                <i
+                    data-lucide="arrow-up-right"
+                    class="w-4 h-4"
+                ></i>
+
+            </a>
+
+        </article>
+
+
+        <!-- ==================================================
+             BUSINESSLEDGER
+        ================================================== -->
+
+        <article
+            class="
+                project-card
+                glass-card
+                rounded-3xl
+                p-8
+                flex
+                flex-col
+            "
+            data-aos="fade-up"
+            data-aos-delay="200"
+        >
+
+            <div
+                class="
+                    flex
+                    justify-between
+                    items-start
+                    gap-4
+                    mb-8
+                "
+            >
+
+                <div
+                    class="
+                        w-14 h-14
+                        rounded-2xl
+                        bg-cyan-500/10
+                        border
+                        border-cyan-500/20
+                        flex
+                        items-center
+                        justify-center
+                    "
+                >
+
+                    <i
+                        data-lucide="building-2"
+                        class="
+                            w-7 h-7
+                            text-cyan-400
+                        "
+                    ></i>
+
+                </div>
+
+
+                <div
+                    class="
+                        flex
+                        items-center
+                        gap-2
+                        text-xs
+                        font-semibold
+                        text-gray-500
+                    "
+                >
+
+                    <span
+                        class="
+                            status-dot
+                            bg-gray-600
+                        "
+                    ></span>
+
+                    <span data-i18n="status.planned">
+                        Planned
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <p
+                class="
+                    text-xs
+                    text-cyan-400
+                    font-bold
+                    uppercase
+                    tracking-[.18em]
+                    mb-2
+                "
+            >
+                Go × Vue.js
+            </p>
+
+
+            <h4
+                class="
+                    text-2xl
+                    font-bold
+                    mb-4
+                "
+            >
+                BusinessLedger
+            </h4>
+
+
+            <p
+                class="
+                    text-gray-400
+                    leading-relaxed
+                    mb-7
+                "
+                data-i18n="business.description"
+            >
+                Ide project berikutnya untuk
+                mengeksplorasi Go melalui sistem
+                bisnis yang modular dan API-oriented.
+                Masih sebuah rencana — belum dimulai.
+            </p>
+
+
+            <div
+                class="
+                    flex
+                    flex-wrap
+                    gap-2
+                    mb-8
+                "
+            >
+
+                <span class="tech-badge">Go</span>
+                <span class="tech-badge">Vue.js</span>
+                <span class="tech-badge">REST API</span>
+                <span class="tech-badge">PostgreSQL</span>
+
+            </div>
+
+
+            <div
+                class="
+                    mt-auto
+                    inline-flex
+                    items-center
+                    gap-2
+                    text-sm
+                    font-medium
+                    text-gray-600
+                "
+            >
+
+                <i
+                    data-lucide="clock-3"
+                    class="w-5 h-5"
+                ></i>
+
+                <span data-i18n="common.future">
+                    Future Project
+                </span>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     CURRENT CHAPTER
+====================================================== -->
+
+<section id="now">
+
+    <h3
+        class="
+            text-sm
+            font-bold
+            tracking-widest
+            text-gold
+            uppercase
+            mb-8
+            flex
+            items-center
+            gap-4
+        "
+        data-aos="fade-right"
+    >
+
+        <span
+            class="
+                w-8
+                h-[1px]
+                bg-gold
+            "
+        ></span>
+
+        <span data-i18n="section.now">
+            Bab Saat Ini
+        </span>
+
+    </h3>
+
+
+    <div
+        class="
+            glass-card
+            rounded-3xl
+            p-8
+            md:p-10
+        "
+        data-aos="fade-up"
+    >
+
+        <div
+            class="
+                grid
+                grid-cols-1
+                sm:grid-cols-2
+                lg:grid-cols-4
+                gap-8
+            "
+        >
+
+
+            <div>
+
+                <div
+                    class="
+                        flex
+                        items-center
+                        gap-2
+                        mb-3
+                    "
+                >
+
+                    <span
+                        class="
+                            w-2 h-2
+                            rounded-full
+                            bg-green-400
+                            animate-pulse
+                        "
+                    ></span>
+
+                    <p
+                        class="
+                            text-xs
+                            text-gray-500
+                            uppercase
+                            tracking-wider
+                            font-semibold
+                        "
+                        data-i18n="now.building"
+                    >
+                        Building
+                    </p>
+
+                </div>
+
+                <p
+                    class="
+                        text-white
+                        font-semibold
+                    "
+                >
+                    TaskLedger
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <p
+                    class="
+                        text-xs
+                        text-gray-500
+                        uppercase
+                        tracking-wider
+                        font-semibold
+                        mb-3
+                    "
+                    data-i18n="now.learning"
+                >
+                    Learning
+                </p>
+
+                <p
+                    class="
+                        text-white
+                        font-semibold
+                    "
+                >
+                    Spring Boot
+                    <br>
+                    API Development
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <p
+                    class="
+                        text-xs
+                        text-gray-500
+                        uppercase
+                        tracking-wider
+                        font-semibold
+                        mb-3
+                    "
+                    data-i18n="now.investing"
+                >
+                    Investing
+                </p>
+
+                <p
+                    class="
+                        text-white
+                        font-semibold
+                    "
+                    data-i18n="now.portfolio"
+                >
+                    Building a Long-Term Portfolio
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <p
+                    class="
+                        text-xs
+                        text-gray-500
+                        uppercase
+                        tracking-wider
+                        font-semibold
+                        mb-3
+                    "
+                    data-i18n="now.next"
+                >
+                    Next
+                </p>
+
+                <p
+                    class="
+                        text-white
+                        font-semibold
+                    "
+                >
+                    Go
+                    <br>
+                    BusinessLedger
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     PRINCIPLES
+====================================================== -->
+
+<section id="principles">
+
+    <h3
+        class="
+            text-sm
+            font-bold
+            tracking-widest
+            text-gold
+            uppercase
+            mb-8
+            flex
+            items-center
+            gap-4
+        "
+        data-aos="fade-right"
+    >
+
+        <span
+            class="
+                w-8
+                h-[1px]
+                bg-gold
+            "
+        ></span>
+
+        <span data-i18n="section.principles">
+            Prinsip
+        </span>
+
+    </h3>
+
+
+    <div
+        class="
+            grid
+            grid-cols-1
+            sm:grid-cols-2
+            lg:grid-cols-4
+            gap-4
+        "
+    >
+
+        <div
+            class="
+                glass
+                rounded-2xl
+                p-7
+            "
+            data-aos="zoom-in"
+        >
+
+            <span
+                class="
+                    text-gold
+                    text-xl
+                    font-bold
+                "
+            >
+                01
+            </span>
+
+            <p
+                class="
+                    text-white
+                    font-semibold
+                    mt-4
+                "
+                data-i18n="principle.build"
+            >
+                Build before you teach.
+            </p>
+
+        </div>
+
+
+        <div
+            class="
+                glass
+                rounded-2xl
+                p-7
+            "
+            data-aos="zoom-in"
+            data-aos-delay="75"
+        >
+
+            <span
+                class="
+                    text-gold
+                    text-xl
+                    font-bold
+                "
+            >
+                02
+            </span>
+
+            <p
+                class="
+                    text-white
+                    font-semibold
+                    mt-4
+                "
+                data-i18n="principle.risk"
+            >
+                Protect the downside.
+            </p>
+
+        </div>
+
+
+        <div
+            class="
+                glass
+                rounded-2xl
+                p-7
+            "
+            data-aos="zoom-in"
+            data-aos-delay="150"
+        >
+
+            <span
+                class="
+                    text-gold
+                    text-xl
+                    font-bold
+                "
+            >
+                03
+            </span>
+
+            <p
+                class="
+                    text-white
+                    font-semibold
+                    mt-4
+                "
+                data-i18n="principle.long"
+            >
+                Think long term.
+            </p>
+
+        </div>
+
+
+        <div
+            class="
+                glass
+                rounded-2xl
+                p-7
+            "
+            data-aos="zoom-in"
+            data-aos-delay="225"
+        >
+
+            <span
+                class="
+                    text-gold
+                    text-xl
+                    font-bold
+                "
+            >
+                04
+            </span>
+
+            <p
+                class="
+                    text-white
+                    font-semibold
+                    mt-4
+                "
+                data-i18n="principle.learn"
+            >
+                Stay curious.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     CONNECT
+====================================================== -->
+
+<section
+    id="connect"
+    class="
+        max-w-3xl
+        mx-auto
+        w-full
+        text-center
+    "
+    data-aos="fade-up"
+>
+
+    <p
+        class="
+            text-xs
+            text-gold
+            uppercase
+            tracking-[.25em]
+            font-bold
+            mb-4
+        "
+    >
+        Somewhere on the internet
+    </p>
+
+
+    <h3
+        class="
+            text-3xl
+            md:text-4xl
+            font-bold
+            mb-4
+        "
+        data-i18n="connect.title"
+    >
+        Mari tetap terhubung.
+    </h3>
+
+
+    <p
+        class="
+            text-gray-500
+            mb-10
+        "
+        data-i18n="connect.description"
+    >
+        Kode, catatan perjalanan,
+        dan hal-hal yang sedang saya bangun.
+    </p>
+
+
+    <div
+        class="
+            grid
+            grid-cols-1
+            sm:grid-cols-2
+            gap-4
+        "
+    >
+
+
+        <a
+            href="https://github.com/FeryPermana"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="
+                glass
+                rounded-2xl
+                p-5
+                flex
+                items-center
+                justify-between
+                group
+                hover:-translate-y-1
+                transition-all
+            "
+        >
+
+            <div
+                class="
+                    flex
+                    items-center
+                    gap-4
+                "
+            >
+
+                <i data-lucide="github"></i>
+
+                <span class="font-semibold">
+                    GitHub
+                </span>
+
+            </div>
+
+            <i
+                data-lucide="arrow-up-right"
+                class="
+                    text-gray-600
+                    group-hover:text-gold
+                "
+            ></i>
+
+        </a>
+
+
+        <a
+            href="https://www.linkedin.com/in/ferrypermana"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="
+                glass
+                rounded-2xl
+                p-5
+                flex
+                items-center
+                justify-between
+                group
+                hover:-translate-y-1
+                transition-all
+            "
+        >
+
+            <div
+                class="
+                    flex
+                    items-center
+                    gap-4
+                "
+            >
+
+                <i data-lucide="linkedin"></i>
+
+                <span class="font-semibold">
+                    LinkedIn
+                </span>
+
+            </div>
+
+            <i
+                data-lucide="arrow-up-right"
+                class="
+                    text-gray-600
+                    group-hover:text-gold
+                "
+            ></i>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     FOOTER
+====================================================== -->
+
+<footer
+    class="
+        text-center
+        pt-16
+        border-t
+        border-white/5
+    "
+>
+
+    <div
+        class="
+            mb-8
+            text-xl
+            md:text-2xl
+            font-light
+            tracking-wide
+            text-gray-300
+        "
+    >
+
+        <p data-i18n="footer.software">
+            Building Software.
+        </p>
+
+        <p data-i18n="footer.wealth">
+            Growing Wealth.
+        </p>
+
+        <p data-i18n="footer.journey">
+            Documenting the Journey.
+        </p>
+
+    </div>
+
+
+    <div
+        class="
+            flex
+            items-center
+            justify-center
+            gap-2
+            text-sm
+            text-gray-600
+        "
+    >
+
+        <span>
+            © 2026 Ferry Permana
+        </span>
+
+        <span>•</span>
+
+        <span>
+            🐺 Wolf of Nothing
+        </span>
+
+    </div>
+
+</footer>
+
+
+</main>
+
+
+<!-- ======================================================
+     SCRIPTS
+====================================================== -->
+
+<script src="https://unpkg.com/lucide@latest"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+
+<script>
+
+    /* ==================================================
+       INIT
+    ================================================== */
+
+    lucide.createIcons();
+
+    AOS.init({
+        once: true,
+        offset: 50,
+        duration: 800,
+        easing: 'ease-out-cubic'
+    });
+
+
+    /* ==================================================
+       COIN
+    ================================================== */
+
+    const coinTitles = {
+
+        id: [
+            '⚡ Ferry Permana',
+            '🐺 Wolf of Nothing'
+        ],
+
+        en: [
+            '⚡ Ferry Permana',
+            '🐺 Wolf of Nothing'
+        ]
+
+    };
+
+
+    document.addEventListener(
+        'DOMContentLoaded',
+        () => {
+
+            const container =
+                document.getElementById(
+                    'profile-coin-container'
+                );
+
+            const coin =
+                document.getElementById(
+                    'coin-element'
+                );
+
+            const dots =
+                container.querySelectorAll(
+                    '.coin-dot'
+                );
+
+            const title =
+                document.getElementById(
+                    'coin-title'
+                );
+
 
             let currentIndex = 0;
+
             window.currentCoinIndex = 0;
-            let coinInterval = null;
-            const intervalTime = 5000; // Diubah menjadi tepat 5 detik sesuai permintaan
+
+            let interval = null;
+
 
             function flipCoin(index) {
-                window.currentCoinIndex = index;
-                coinElement.classList.remove('rotate-0', 'rotate-180');
-                
-                if (index === 1) {
-                    coinElement.classList.add('rotate-180'); // Sisi belakang (Serigala)
-                } else {
-                    coinElement.classList.add('rotate-0'); // Sisi depan (Karakter Putih / Avatar GitHub)
-                }
-
-                dots.forEach((dot, i) => {
-                    if (i === index) {
-                        dot.classList.add('bg-gold');
-                        dot.classList.remove('bg-gray-600');
-                    } else {
-                        dot.classList.remove('bg-gold');
-                        dot.classList.add('bg-gray-600');
-                    }
-                });
-
-                if (titleElement && slideData[index]) {
-                    titleElement.style.opacity = '0';
-                    setTimeout(() => {
-                        titleElement.textContent = coinTitles[document.documentElement.lang || "id"][index];
-                        titleElement.style.opacity = '1';
-                    }, 150);
-                }
 
                 currentIndex = index;
-            }
 
-            function nextCoinFlip() {
-                let nextIndex = (currentIndex + 1) % 2;
-                flipCoin(nextIndex);
-            }
+                window.currentCoinIndex = index;
 
-            function startTimer() {
-                if (coinInterval) clearInterval(coinInterval);
-                coinInterval = setInterval(nextCoinFlip, intervalTime);
-            }
 
-            function stopTimer() {
-                if (coinInterval) {
-                    clearInterval(coinInterval);
-                    coinInterval = null;
-                }
-            }
+                coin.classList.remove(
+                    'rotate-0',
+                    'rotate-180'
+                );
 
-            // Berhenti berputar otomatis saat di-hover, lanjut lagi saat kursor keluar
-            coinContainer.addEventListener('mouseenter', stopTimer);
-            coinContainer.addEventListener('mouseleave', startTimer);
 
-            // Klik manual pada titik indikator
-            dots.forEach((dot) => {
-                dot.addEventListener('click', (e) => {
-                    const targetIndex = parseInt(e.currentTarget.getAttribute('data-index'), 10);
-                    if (!isNaN(targetIndex) && targetIndex !== currentIndex) {
-                        flipCoin(targetIndex);
-                        stopTimer();
-                        startTimer();
+                coin.classList.add(
+                    index === 0
+                        ? 'rotate-0'
+                        : 'rotate-180'
+                );
+
+
+                dots.forEach(
+                    (dot, i) => {
+
+                        dot.classList.toggle(
+                            'bg-gold',
+                            i === index
+                        );
+
+                        dot.classList.toggle(
+                            'bg-gray-600',
+                            i !== index
+                        );
+
                     }
-                });
-            });
+                );
 
-            // Init awal
+
+                const lang =
+                    document.documentElement.lang
+                    || 'id';
+
+
+                title.style.opacity = '0';
+
+
+                setTimeout(
+                    () => {
+
+                        title.textContent =
+                            coinTitles[lang][index];
+
+                        title.style.opacity = '1';
+
+                    },
+                    150
+                );
+
+            }
+
+
+            function start() {
+
+                clearInterval(interval);
+
+                interval =
+                    setInterval(
+                        () => {
+
+                            flipCoin(
+                                (currentIndex + 1) % 2
+                            );
+
+                        },
+                        5000
+                    );
+
+            }
+
+
+            function stop() {
+
+                clearInterval(interval);
+
+            }
+
+
+            container.addEventListener(
+                'mouseenter',
+                stop
+            );
+
+
+            container.addEventListener(
+                'mouseleave',
+                start
+            );
+
+
+            dots.forEach(
+                dot => {
+
+                    dot.addEventListener(
+                        'click',
+                        () => {
+
+                            flipCoin(
+                                Number(
+                                    dot.dataset.index
+                                )
+                            );
+
+                            start();
+
+                        }
+                    );
+
+                }
+            );
+
+
             flipCoin(0);
-            startTimer();
-        });
 
-        /* ================= LANGUAGE SWITCHER ================= */
-        const translations = {
-            id: {
-                'hero.explore': 'Jelajahi TradeLedger',
-                'common.sourceCode': 'Kode Sumber',
-                'common.live': 'Website Live',
-                'section.about': 'Tentang Saya',
-                'section.what': 'Yang Saya Kerjakan',
-                'section.featured': 'Proyek Unggulan',
-                'section.tech': 'Tech Stack',
-                'section.principles': 'Prinsip',
-                'section.now': 'Sekarang',
-                'section.connect': 'Terhubung',
-                'about.p1': 'Saya adalah Software Engineer yang berfokus membangun aplikasi web yang scalable menggunakan Laravel, Vue.js, REST API, Docker, dan teknologi web modern.',
-                'about.p2': 'Di luar software engineering, saya mendokumentasikan perjalanan investasi saya. Alih-alih mengikuti satu gaya investasi, saya beradaptasi dengan siklus pasar dengan menggabungkan value investing, growth investing, dan swing trading dengan manajemen risiko yang disiplin.',
-                'about.quote': 'Saya tidak menjual kursus. Saya menikmati proses membangun produk, berbagi ide, dan terus belajar.',
-                'what.software': 'Software Engineering',
-                'what.investing': 'Strategic Value Investing',
-                'investing.value': 'Value Investing',
-                'investing.growth': 'Growth Investing',
-                'investing.swing': 'Swing Trading',
-                'investing.portfolio': 'Manajemen Portofolio',
-                'investing.risk': 'Manajemen Risiko',
-                'project.subtitle': 'Platform Manajemen Portofolio Investasi & Trading Modern',
-                'project.description': 'TradeLedger membantu investor mengelola portofolio, mencatat transaksi, menganalisis investasi, memantau performa, dan membangun kekayaan jangka panjang melalui platform yang modern dan intuitif.',
-                'principles.build': 'Bangun sebelum mengajar.',
-                'principles.discipline': 'Tetap disiplin.',
-                'principles.longterm': 'Berpikir jangka panjang.',
-                'principles.learning': 'Jangan pernah berhenti belajar.',
-                'now.buildingLabel': 'Sedang Dibangun',
-                'now.learningLabel': 'Sedang Dipelajari',
-                'now.goalLabel': 'Tujuan Saat Ini',
-                'now.goal': 'Membangun Investment Operating System',
-                'connect.repo': 'Repository TradeLedger',
-                'footer.software': 'Membangun Software.',
-                'footer.wealth': 'Menumbuhkan Kekayaan.',
-                'footer.ideas': 'Berbagi Ide.'
-            },
-            en: {
-                'hero.explore': 'Explore TradeLedger',
-                'common.sourceCode': 'Source Code',
-                'common.live': 'Live Website',
-                'section.about': 'About Me',
-                'section.what': 'What I Do',
-                'section.featured': 'Featured Project',
-                'section.tech': 'Tech Stack',
-                'section.principles': 'Principles',
-                'section.now': 'Now',
-                'section.connect': 'Connect',
-                'about.p1': "I'm a Software Engineer passionate about building scalable web applications using Laravel, Vue.js, REST APIs, Docker, and modern web technologies.",
-                'about.p2': 'Outside of software engineering, I document my investment journey. Rather than following a single investing style, I adapt to market cycles by combining value investing, growth investing, and swing trading with disciplined risk management.',
-                'about.quote': "I don't sell courses. I enjoy building products, sharing ideas, and continuously learning.",
-                'what.software': 'Software Engineering',
-                'what.investing': 'Strategic Value Investing',
-                'investing.value': 'Value Investing',
-                'investing.growth': 'Growth Investing',
-                'investing.swing': 'Swing Trading',
-                'investing.portfolio': 'Portfolio Management',
-                'investing.risk': 'Risk Management',
-                'project.subtitle': 'Modern Investment & Trading Portfolio Management Platform',
-                'project.description': 'TradeLedger helps investors manage portfolios, record trades, analyze investments, monitor performance, and build long-term wealth through a modern and intuitive platform.',
-                'principles.build': 'Build before you teach.',
-                'principles.discipline': 'Stay disciplined.',
-                'principles.longterm': 'Think long term.',
-                'principles.learning': 'Never stop learning.',
-                'now.buildingLabel': 'Currently Building',
-                'now.learningLabel': 'Currently Learning',
-                'now.goalLabel': 'Current Goal',
-                'now.goal': 'Build an Investment Operating System',
-                'connect.repo': 'TradeLedger Repository',
-                'footer.software': 'Building Software.',
-                'footer.wealth': 'Growing Wealth.',
-                'footer.ideas': 'Sharing Ideas.'
-            }
-        };
+            start();
 
-        const typedStrings = {
-            id: [
-                'Software Engineer',
-                'Strategic Value Investor',
-                'Penggiat Open Source',
-                'Membangun TradeLedger'
-            ],
-            en: [
-                'Software Engineer',
-                'Strategic Value Investor',
-                'Open Source Enthusiast',
-                'Building TradeLedger'
-            ]
-        };
+        }
+    );
 
-        const coinTitles = {
-            id: ['⚡ Ferry Permana', '🐺 Wolf of Nothing'],
-            en: ['⚡ Ferry Permana', '🐺 Wolf of Nothing']
-        };
 
-        function setLanguage(lang) {
-            document.documentElement.lang = lang;
+    /* ==================================================
+       TRANSLATION
+    ================================================== */
 
-            document.querySelectorAll('[data-i18n]').forEach((element) => {
-                const key = element.dataset.i18n;
-                if (translations[lang][key]) {
-                    element.textContent = translations[lang][key];
-                }
-            });
+    const translations = {
 
-            const switcher = document.getElementById('language-switch');
-            const idButton = document.getElementById('lang-id');
-            const enButton = document.getElementById('lang-en');
+        id: {
 
-            switcher.classList.toggle('en', lang === 'en');
-            idButton.classList.toggle('active', lang === 'id');
-            enButton.classList.toggle('active', lang === 'en');
+            'hero.description':
+                'Membangun software, menumbuhkan aset, dan mendokumentasikan perjalanan.',
 
-            localStorage.setItem('preferredLanguage', lang);
+            'hero.sub':
+                'Tidak menjual mimpi. Hanya membangun, belajar, mencoba, dan mencatat prosesnya.',
 
-            if (window.typedInstance) {
-                window.typedInstance.destroy();
-            }
+            'hero.explore':
+                'Apa yang Saya Bangun',
 
-            window.typedInstance = new Typed('#typed', {
-                strings: typedStrings[lang],
-                typeSpeed: 50,
-                backSpeed: 30,
-                backDelay: 2000,
-                loop: true,
-                showCursor: true,
-                cursorChar: '|'
-            });
+            'section.world':
+                'Dunia Saya',
 
-            if (window.currentCoinIndex !== undefined) {
-                const titleElement = document.getElementById('coin-title');
-                if (titleElement) {
-                    titleElement.textContent = coinTitles[lang][window.currentCoinIndex];
-                }
-            }
+            'about.lead':
+                'Software adalah apa yang saya bangun. Investing adalah bagaimana saya belajar tentang nilai, risiko, dan waktu.',
+
+            'about.software':
+                'Saya menikmati proses mengubah sebuah ide menjadi sistem yang benar-benar berjalan — dari backend, REST API, database, sampai frontend yang bisa digunakan.',
+
+            'about.investing':
+                'Di sisi lain, saya mendokumentasikan perjalanan investasi pribadi: mempelajari bisnis, mengelola risiko, membangun portofolio, dan sesekali melakukan swing trading dengan sistem yang terukur.',
+
+            'about.wolf':
+                'Bukan expert. Bukan guru. Hanya identitas untuk perjalanan membangun, belajar, berinvestasi, gagal, memperbaiki, dan terus berjalan.',
+
+            'section.do':
+                'Yang Saya Jalani',
+
+            'world.software':
+                'Membangun aplikasi dan API sambil terus memperluas cara berpikir sebagai software engineer.',
+
+            'investing.title':
+                'Perjalanan Investasi',
+
+            'world.investing':
+                'Membangun aset secara bertahap, mempelajari bisnis dan market, serta mendokumentasikan prosesnya.',
+
+            'section.build':
+                'Yang Saya Bangun',
+
+            'build.intro':
+                'Project pribadi bukan sekadar untuk selesai. Masing-masing menjadi tempat saya belajar dan bereksperimen.',
+
+            'status.active':
+                'Aktif',
+
+            'status.building':
+                'Sedang Dibangun',
+
+            'status.planned':
+                'Rencana',
+
+            'trade.description':
+                'Personal investment & trading journal untuk mencatat keputusan, transaksi, trade execution, portofolio, dan perjalanan investasi saya sendiri.',
+
+            'task.description':
+                'Project yang sedang saya bangun untuk mengeksplorasi Java Spring Boot, enterprise backend development, REST API, dan arsitektur aplikasi yang lebih terstruktur.',
+
+            'business.description':
+                'Ide project berikutnya untuk mengeksplorasi Go melalui sistem bisnis yang modular dan API-oriented. Masih sebuah rencana — belum dimulai.',
+
+            'common.github':
+                'Lihat di GitHub',
+
+            'common.future':
+                'Project Mendatang',
+
+            'section.now':
+                'Bab Saat Ini',
+
+            'now.building':
+                'Sedang Dibangun',
+
+            'now.learning':
+                'Sedang Dipelajari',
+
+            'now.investing':
+                'Investasi',
+
+            'now.portfolio':
+                'Membangun Portofolio Jangka Panjang',
+
+            'now.next':
+                'Berikutnya',
+
+            'section.principles':
+                'Prinsip',
+
+            'principle.build':
+                'Bangun sebelum mengajar.',
+
+            'principle.risk':
+                'Jaga sisi risiko.',
+
+            'principle.long':
+                'Berpikir jangka panjang.',
+
+            'principle.learn':
+                'Tetap penasaran.',
+
+            'connect.title':
+                'Mari tetap terhubung.',
+
+            'connect.description':
+                'Kode, catatan perjalanan, dan hal-hal yang sedang saya bangun.',
+
+            'footer.software':
+                'Membangun Software.',
+
+            'footer.wealth':
+                'Menumbuhkan Aset.',
+
+            'footer.journey':
+                'Mendokumentasikan Perjalanan.'
+        },
+
+
+        en: {
+
+            'hero.description':
+                'Building software, growing wealth, and documenting the journey.',
+
+            'hero.sub':
+                'No dreams to sell. Just building, learning, experimenting, and documenting the process.',
+
+            'hero.explore':
+                'What I Build',
+
+            'section.world':
+                'My World',
+
+            'about.lead':
+                'Software is what I build. Investing is how I learn about value, risk, and time.',
+
+            'about.software':
+                'I enjoy turning ideas into systems that actually work — from backend services, REST APIs and databases to usable frontends.',
+
+            'about.investing':
+                'On the other side, I document my personal investing journey: studying businesses, managing risk, building a portfolio, and occasionally swing trading with a structured system.',
+
+            'about.wolf':
+                'Not an expert. Not a guru. Just an identity for a journey of building, learning, investing, failing, improving, and moving forward.',
+
+            'section.do':
+                'What I Do',
+
+            'world.software':
+                'Building applications and APIs while continuously expanding the way I think as a software engineer.',
+
+            'investing.title':
+                'Investing Journey',
+
+            'world.investing':
+                'Building assets gradually, studying businesses and markets, and documenting the process.',
+
+            'section.build':
+                'What I Build',
+
+            'build.intro':
+                'Personal projects are more than things to finish. Each one is a place to learn and experiment.',
+
+            'status.active':
+                'Active',
+
+            'status.building':
+                'Building',
+
+            'status.planned':
+                'Planned',
+
+            'trade.description':
+                'My personal investment and trading journal for recording decisions, transactions, trade executions, portfolios, and my own investing journey.',
+
+            'task.description':
+                'A project I am currently building to explore Java Spring Boot, enterprise backend development, REST APIs, and more structured application architecture.',
+
+            'business.description':
+                'A future project idea for exploring Go through a modular, API-oriented business system. Still a plan — development has not started.',
+
+            'common.github':
+                'View on GitHub',
+
+            'common.future':
+                'Future Project',
+
+            'section.now':
+                'Current Chapter',
+
+            'now.building':
+                'Building',
+
+            'now.learning':
+                'Learning',
+
+            'now.investing':
+                'Investing',
+
+            'now.portfolio':
+                'Building a Long-Term Portfolio',
+
+            'now.next':
+                'Next',
+
+            'section.principles':
+                'Principles',
+
+            'principle.build':
+                'Build before you teach.',
+
+            'principle.risk':
+                'Protect the downside.',
+
+            'principle.long':
+                'Think long term.',
+
+            'principle.learn':
+                'Stay curious.',
+
+            'connect.title':
+                "Let's stay connected.",
+
+            'connect.description':
+                'Code, notes from the journey, and things I am currently building.',
+
+            'footer.software':
+                'Building Software.',
+
+            'footer.wealth':
+                'Growing Wealth.',
+
+            'footer.journey':
+                'Documenting the Journey.'
         }
 
-        document.getElementById('lang-id').addEventListener('click', () => setLanguage('id'));
-        document.getElementById('lang-en').addEventListener('click', () => setLanguage('en'));
+    };
 
-        const savedLanguage = localStorage.getItem('preferredLanguage') || 'id';
-        setLanguage(savedLanguage);
 
-    </script>
+    /* ==================================================
+       TYPED
+    ================================================== */
+
+    const typedStrings = {
+
+        id: [
+            'Building Software',
+            'Building Wealth',
+            'Learning in Public',
+            'Building TradeLedger',
+            'Building TaskLedger',
+            '🐺 Wolf of Nothing'
+        ],
+
+        en: [
+            'Building Software',
+            'Building Wealth',
+            'Learning in Public',
+            'Building TradeLedger',
+            'Building TaskLedger',
+            '🐺 Wolf of Nothing'
+        ]
+
+    };
+
+
+    /* ==================================================
+       LANGUAGE
+    ================================================== */
+
+    function setLanguage(lang) {
+
+        document.documentElement.lang = lang;
+
+
+        document
+            .querySelectorAll('[data-i18n]')
+            .forEach(
+                element => {
+
+                    const key =
+                        element.dataset.i18n;
+
+                    if (
+                        translations[lang] &&
+                        translations[lang][key]
+                    ) {
+
+                        element.textContent =
+                            translations[lang][key];
+
+                    }
+
+                }
+            );
+
+
+        const switcher =
+            document.getElementById(
+                'language-switch'
+            );
+
+        const idButton =
+            document.getElementById(
+                'lang-id'
+            );
+
+        const enButton =
+            document.getElementById(
+                'lang-en'
+            );
+
+
+        switcher.classList.toggle(
+            'en',
+            lang === 'en'
+        );
+
+
+        idButton.classList.toggle(
+            'active',
+            lang === 'id'
+        );
+
+
+        enButton.classList.toggle(
+            'active',
+            lang === 'en'
+        );
+
+
+        localStorage.setItem(
+            'preferredLanguage',
+            lang
+        );
+
+
+        if (window.typedInstance) {
+
+            window.typedInstance.destroy();
+
+        }
+
+
+        window.typedInstance =
+            new Typed(
+                '#typed',
+                {
+
+                    strings:
+                        typedStrings[lang],
+
+                    typeSpeed: 50,
+
+                    backSpeed: 30,
+
+                    backDelay: 2000,
+
+                    loop: true,
+
+                    showCursor: true,
+
+                    cursorChar: '|'
+
+                }
+            );
+
+
+        if (
+            window.currentCoinIndex
+            !== undefined
+        ) {
+
+            const title =
+                document.getElementById(
+                    'coin-title'
+                );
+
+
+            if (title) {
+
+                title.textContent =
+                    coinTitles[lang][
+                        window.currentCoinIndex
+                    ];
+
+            }
+
+        }
+
+    }
+
+
+    document
+        .getElementById('lang-id')
+        .addEventListener(
+            'click',
+            () => setLanguage('id')
+        );
+
+
+    document
+        .getElementById('lang-en')
+        .addEventListener(
+            'click',
+            () => setLanguage('en')
+        );
+
+
+    const savedLanguage =
+        localStorage.getItem(
+            'preferredLanguage'
+        ) || 'id';
+
+
+    setLanguage(savedLanguage);
+
+</script>
+
 </body>
 </html>
